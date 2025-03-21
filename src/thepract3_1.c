@@ -2,19 +2,19 @@
 
 int main() {
     int a, b;
-    printf("Введите значение a: ");
+    printf("Enter the number a: ");
     scanf("%d", &a);
-    printf("Введите значение b: ");
+    printf("Enter the number b: ");
     scanf("%d", &b);
 
     int* ptrA = &a;
     int* ptrB = &b;
 
-    *ptrA *= 2; // Увеличиваем a в 2 раза
-    *ptrB /= 2; // Уменьшаем b в 2 раза
+    *ptrA *= 2;
+    *ptrB /= 2;
 
-    printf("Новое значение a: %d\n", a);
-    printf("Новое значение b: %d\n", b);
+    printf("New value of a: %d\n", a);
+    printf("New value of b: %d\n", b);
 
     return 0;
 }

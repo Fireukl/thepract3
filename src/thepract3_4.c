@@ -4,17 +4,17 @@
 
 int main() {
     int n;
-    printf("Введите размер массива b: ");
+    printf("Enter the size of the array b: ");
     scanf("%d", &n);
 
     int* b = (int*)malloc(n * sizeof(int));
-    printf("Введите элементы массива b: ");
+    printf("Enter the array elements b using space: ");
     for (int i = 0; i < n; ++i) {
         scanf("%d", &b[i]);
     }
 
-    double* c = (double*)malloc(n * sizeof(double)); // Динамический массив для c
-    int c_size = 0; // Счетчик положительных элементов
+    double* c = (double*)malloc(n * sizeof(double));
+    int c_size = 0; 
 
     for (int i = 0; i < n; ++i) {
         if (b[i] > 0) {
@@ -22,7 +22,6 @@ int main() {
         }
     }
 
-    // Сортируем массив c методом выбора
     for (int i = 0; i < c_size; i++) {
         int minIndex = i;
         for (int j = i + 1; j < c_size; j++) {
@@ -35,7 +34,7 @@ int main() {
         c[minIndex] = temp;
     }
 
-    printf("Отсортированный массив c: ");
+    printf("Sorted array c: ");
     for (int i = 0; i < c_size; i++) {
         printf("%.2f ", c[i]);
     }
